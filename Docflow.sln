@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EBA8A2CB-5761-4157-AAF2-F1C6A82E0185}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docflow.Domain", "Docflow.Domain\Docflow.Domain.csproj", "{EA5BA26D-C7D0-4843-A483-AE04CA827AE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{2E8A576C-1AFC-47F3-95EE-B779115B52D4}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{66DEC431-B37F-4335-B338-E21A723018D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docflow.Application", "Docflow.Application\Docflow.Application.csproj", "{D6BD57DC-211F-4DE9-99BD-3522624EEF9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docflow.Domain.Tests", "Docflow.Domain.Tests\Docflow.Domain.Tests.csproj", "{D0E1F2AD-807A-4495-9F84-A882F27C0D2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA5BA26D-C7D0-4843-A483-AE04CA827AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5BA26D-C7D0-4843-A483-AE04CA827AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5BA26D-C7D0-4843-A483-AE04CA827AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5BA26D-C7D0-4843-A483-AE04CA827AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6BD57DC-211F-4DE9-99BD-3522624EEF9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6BD57DC-211F-4DE9-99BD-3522624EEF9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6BD57DC-211F-4DE9-99BD-3522624EEF9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6BD57DC-211F-4DE9-99BD-3522624EEF9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E1F2AD-807A-4495-9F84-A882F27C0D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E1F2AD-807A-4495-9F84-A882F27C0D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E1F2AD-807A-4495-9F84-A882F27C0D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E1F2AD-807A-4495-9F84-A882F27C0D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EA5BA26D-C7D0-4843-A483-AE04CA827AE4} = {EBA8A2CB-5761-4157-AAF2-F1C6A82E0185}
+		{D6BD57DC-211F-4DE9-99BD-3522624EEF9D} = {EBA8A2CB-5761-4157-AAF2-F1C6A82E0185}
+		{D0E1F2AD-807A-4495-9F84-A882F27C0D2E} = {66DEC431-B37F-4335-B338-E21A723018D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44E69314-33ED-4E49-AC19-5FE6CE17B44E}
+	EndGlobalSection
+EndGlobal
