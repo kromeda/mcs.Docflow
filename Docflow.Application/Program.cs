@@ -1,7 +1,10 @@
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.AddFlowOptions();
 
 builder.Services.AddFastEndpoints();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IDiadocApiGateway, DiadocApiGateway>();
 
 WebApplication app = builder.Build();
 

@@ -17,5 +17,7 @@
     <PackageVersion Include="Polly" Version="7.2.3" />
     <PackageVersion Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
     <PackageVersion Include="FastEndpoints" Version="5.5.0" />
+    <PackageVersion Include="CSharpFunctionalExtensions" Version="2.37.0" />
+    <PackageVersion Include="DiadocSDK" Version="2.11.4" />
   </ItemGroup>
 </Project>
