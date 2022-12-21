@@ -8,7 +8,7 @@ public class DiadocCommunicator : IEdoCommunicator
 
     public DiadocCommunicator(IDiadocApiGateway gateway)
     {
-        _api = gateway; 
+        _api = gateway;
     }
 
     public Task<Result<IEnumerable<Counterpart>>> GetCounterparts(CancellationToken ct)

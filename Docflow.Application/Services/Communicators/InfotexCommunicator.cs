@@ -1,4 +1,6 @@
-﻿namespace Docflow.Application.Services.Communicators;
+﻿using Docflow.Application.Interfaces;
+
+namespace Docflow.Application.Services.Communicators;
 
 public class InfotexCommunicator : IEdoCommunicator
 {

@@ -1,4 +1,4 @@
-﻿namespace Docflow.Domain.Models;
+﻿namespace Docflow.Application.Models;
 
 public class Counterpart
 {

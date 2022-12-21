@@ -1,7 +1,5 @@
 <Project>
   <ItemGroup>
-    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
-    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
     <PackageVersion Include="xunit" Version="2.4.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.4.5">
@@ -17,6 +15,7 @@
     <PackageVersion Include="Polly" Version="7.2.3" />
     <PackageVersion Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
     <PackageVersion Include="FastEndpoints" Version="5.5.0" />
+    <PackageVersion Include="FastEndpoints.Swagger" Version="5.5.0" />
     <PackageVersion Include="CSharpFunctionalExtensions" Version="2.37.0" />
     <PackageVersion Include="DiadocSDK" Version="2.11.4" />
   </ItemGroup>

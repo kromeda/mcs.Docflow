@@ -2,18 +2,15 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.AddFlowOptions();
 
 builder.Services.AddFastEndpoints();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerDoc();
 builder.Services.AddGateways();
 builder.Services.AddCommunicators();
 
 WebApplication app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
 app.UseHttpsRedirection();
+app.UseFastEndpoints();
+app.UseOpenApi();
+app.UseSwaggerUi3(s => s.ConfigureDefaults());
 
 app.Run();

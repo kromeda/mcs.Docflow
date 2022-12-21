@@ -1,4 +1,5 @@
-﻿using Docflow.Application.Services.Communicators;
+﻿using Docflow.Application.Interfaces;
+using Docflow.Application.Services.Communicators;
 
 namespace Docflow.Application.Extensions;
 
