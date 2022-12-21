@@ -2,7 +2,7 @@
 
 namespace Docflow.Application.Services.Communicators;
 
-public class DiadocCommunicator
+public class DiadocCommunicator : IEdoCommunicator
 {
     private readonly IDiadocApiGateway _api;
 
