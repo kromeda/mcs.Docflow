@@ -4,22 +4,15 @@ using Diadoc.Api.Proto.Events;
 
 namespace Docflow.Application.Services.Gateways;
 
-public sealed class DiadocApiGateway : ApiGateway, IDiadocApiGateway
+public sealed class DiadocApiGateway : IDiadocApiGateway
 {
     private DiadocApi _api;
     private DiadocGatewayOptions _options;
 
-    public DiadocApiGateway(HttpClient client, IOptionsMonitor<DiadocGatewayOptions> options)
-        : base(client)
+    public DiadocApiGateway(IOptionsMonitor<DiadocGatewayOptions> options)
     {
         OptionsUpdate(options.CurrentValue);
         options.OnChange(OptionsUpdate);
-    }
-
-    private void OptionsUpdate(DiadocGatewayOptions options)
-    {
-        _api = new DiadocApi(options.DefaultClientId, options.DefaultApiUrl, new WinApiCrypt());
-        _options = options;
     }
 
     public async Task<Message> PushMessage(MessageToPost message, CancellationToken ct)
@@ -30,5 +23,11 @@ public sealed class DiadocApiGateway : ApiGateway, IDiadocApiGateway
         Message response = await _api.PostMessageAsync(authToken, message);
 
         return response;
+    }
+    
+    private void OptionsUpdate(DiadocGatewayOptions options)
+    {
+        _api = new DiadocApi(options.DefaultClientId, options.DefaultApiUrl, new WinApiCrypt());
+        _options = options;
     }
 }

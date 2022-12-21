@@ -2,14 +2,13 @@
 
 namespace Docflow.Application.Services.Communicators;
 
-public class DiadocCommunicator<T> : IEdoCommunicator<T>
-    where T : ApiGateway, IDiadocApiGateway
+public class DiadocCommunicator
 {
-    private T _apiGateway;
+    private readonly IDiadocApiGateway _api;
 
-    public DiadocCommunicator(T gateway)
+    public DiadocCommunicator(IDiadocApiGateway gateway)
     {
-        _apiGateway = gateway; 
+        _api = gateway; 
     }
 
     public Task<Result<IEnumerable<Counterpart>>> GetCounterparts(CancellationToken ct)
@@ -27,9 +26,14 @@ public class DiadocCommunicator<T> : IEdoCommunicator<T>
         throw new NotImplementedException();
     }
 
-    public async Task<Result> PushDocument(FlowDocument document, CancellationToken _)
+    public async Task<Result> PushDocument(FlowDocument document, CancellationToken ct)
     {
-        await _apiGateway.PushMessage(new MessageToPost());
+        MessageToPost message = new MessageToPost
+        {
+            FromDepartmentId = document.ExternalId.ToString()
+        };
+
+        await _api.PushMessage(message, ct);
         return Result.Success();
     }
 }
