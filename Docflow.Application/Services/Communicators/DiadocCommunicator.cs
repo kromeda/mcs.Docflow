@@ -28,12 +28,11 @@ internal sealed class DiadocCommunicator : IEdoCommunicator
 
     public async Task<Result> PushDocument(FlowDocument document, CancellationToken ct)
     {
-        MessageToPost message = new MessageToPost
-        {
-            FromDepartmentId = document.ExternalId.ToString()
-        };
-
+        MessageToPost message = new MessageToPost();
+        message.DocumentAttachments.Add(new DocumentAttachment());
         await _api.PushMessage(message, ct);
+        document.ExternalId = ExternalIdentifier.From(Guid.NewGuid());
+
         return Result.Success();
     }
 }

@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿namespace Docflow.Application.Endpoints;
 
-namespace Docflow.Application.Endpoints;
-
-[HttpPost("send_document"), AllowAnonymous]
 public class PushDocumentEndpoint : Endpoint<PushDocumentRequest, PushDocumentResponse>
 {
     public IEnumerable<IEdoCommunicator> Communicators { get; init; }
+
+    public override void Configure()
+    {
+        Post("send_document");
+        AllowAnonymous();
+        Validator<PushDocumentRequestValidator>();
+    }
 
     public override async Task HandleAsync(PushDocumentRequest req, CancellationToken ct)
     {
