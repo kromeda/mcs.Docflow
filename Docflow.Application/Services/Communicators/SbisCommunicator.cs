@@ -1,8 +1,6 @@
-﻿using Docflow.Application.Interfaces;
+﻿namespace Docflow.Application.Services.Communicators;
 
-namespace Docflow.Application.Services.Communicators;
-
-public class SbisCommunicator : IEdoCommunicator
+internal sealed class SbisCommunicator : IEdoCommunicator
 {
     private readonly ISbisApiGateway _api;
 

@@ -1,4 +1,4 @@
-﻿namespace Docflow.Application.Models;
+﻿namespace Docflow.Domain.Models;
 
 public enum EdoType
 {

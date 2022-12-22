@@ -9,6 +9,7 @@ global using Docflow.Application.Models.DiadocGateway;
 global using Docflow.Application.Services;
 global using Docflow.Application.Services.Communicators;
 global using Docflow.Application.Services.Gateways;
+global using Docflow.Domain.Models.Common;
 global using FastEndpoints;
 global using FastEndpoints.Swagger;
 global using Microsoft.Extensions.Options;

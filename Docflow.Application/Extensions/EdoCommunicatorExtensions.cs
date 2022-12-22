@@ -1,6 +1,8 @@
-﻿namespace Docflow.Application.Services.Communicators;
+﻿using Docflow.Domain.Models;
 
-public static class CommunicatorHelper
+namespace Docflow.Application.Extensions;
+
+internal static class EdoCommunicatorExtensions
 {
     public static IEdoCommunicator FindOfEnum(this IEnumerable<IEdoCommunicator> source, EdoType type)
         => type switch

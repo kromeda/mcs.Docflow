@@ -1,4 +1,6 @@
-﻿namespace Docflow.Application.Contracts.Requests;
+﻿using Docflow.Domain.Models;
+
+namespace Docflow.Application.Contracts.Requests;
 
 public class PushDocumentRequest
 {

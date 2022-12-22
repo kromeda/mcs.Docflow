@@ -1,6 +1,6 @@
 ﻿namespace Docflow.Application.Services.Gateways;
 
-public sealed class SbisApiGateway : ISbisApiGateway
+internal sealed class SbisApiGateway : ISbisApiGateway
 {
     
 }

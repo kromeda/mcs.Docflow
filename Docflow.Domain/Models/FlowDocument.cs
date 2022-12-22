@@ -2,11 +2,11 @@
 
 public class FlowDocument
 {
-    public int Id { get; init; }
+    public Identifier Id { get; init; }
 
-    public Guid ExternalId { get; init; }
+    public ExternalIdentifier ExternalId { get; init; }
 
-    public byte[] Data { get; init; }
+    public FileContentData Data { get; init; }
 
-    public string Name { get; init; }
+    public FileName Name { get; init; }
 }

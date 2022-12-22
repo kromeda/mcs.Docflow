@@ -1,7 +1,6 @@
-﻿namespace Docflow.Application.Services.Gateways
+﻿namespace Docflow.Application.Services.Gateways;
+
+internal sealed class InfotexApiGateway : IInfotextApiGateway
 {
-    public sealed class InfotexApiGateway : IInfotextApiGateway
-    {
-        
-    }
+    
 }

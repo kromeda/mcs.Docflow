@@ -1,9 +1,6 @@
-﻿using Docflow.Application.Interfaces;
-using Docflow.Application.Services.Communicators;
+﻿namespace Docflow.Application.Extensions;
 
-namespace Docflow.Application.Extensions;
-
-public static class ServiceCollectionExtensions
+internal static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddGateways(this IServiceCollection services)
     {

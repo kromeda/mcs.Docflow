@@ -2,9 +2,9 @@
 
 public class Counterpart
 {
-    public int Id { get; init; }
+    public Identifier Id { get; init; }
 
-    public Guid ExternalId { get; init; }
+    public ExternalIdentifier ExternalId { get; init; }
 
-    public string Name { get; init; }
+    public CompanyName Name { get; init; }
 }

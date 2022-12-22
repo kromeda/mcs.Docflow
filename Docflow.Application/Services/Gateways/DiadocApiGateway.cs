@@ -4,7 +4,7 @@ using Diadoc.Api.Proto.Events;
 
 namespace Docflow.Application.Services.Gateways;
 
-public sealed class DiadocApiGateway : IDiadocApiGateway
+internal sealed class DiadocApiGateway : IDiadocApiGateway
 {
     private DiadocApi _api;
     private DiadocGatewayOptions _options;

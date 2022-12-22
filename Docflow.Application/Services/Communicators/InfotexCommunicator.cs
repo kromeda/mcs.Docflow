@@ -1,8 +1,6 @@
-﻿using Docflow.Application.Interfaces;
+﻿namespace Docflow.Application.Services.Communicators;
 
-namespace Docflow.Application.Services.Communicators;
-
-public class InfotexCommunicator : IEdoCommunicator
+internal sealed class InfotexCommunicator : IEdoCommunicator
 {
     private readonly IInfotextApiGateway _api;
 
