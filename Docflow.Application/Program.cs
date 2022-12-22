@@ -13,4 +13,6 @@ app.UseFastEndpoints();
 app.UseOpenApi();
 app.UseSwaggerUi3(s => s.ConfigureDefaults());
 
+app.Map("/", () => Results.Redirect("/swagger"));
+
 app.Run();
