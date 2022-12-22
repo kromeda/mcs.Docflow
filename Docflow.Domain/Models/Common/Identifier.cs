@@ -6,7 +6,7 @@ public class Identifier : ValueOf<int, Identifier>
     {
         if (Value < 0)
         {
-            const string message = "Идентификатор должен быть натуральным числом";
+            const string message = "Идентификатор должен быть положительным числом";
             throw new ValidationException(message, new[]
             {
                 new ValidationFailure(nameof(Identifier), message)
