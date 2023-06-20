@@ -2,9 +2,16 @@
 
 public class Counterpart
 {
-    public Identifier Id { get; init; }
+    public Identifier Id { get; private set; }
 
-    public ExternalIdentifier ExternalId { get; init; }
+    public ExternalIdentifier ExternalId { get; private set; }
 
-    public CompanyName Name { get; init; }
+    public CompanyName Name { get; private set; }
+
+    public Counterpart(Identifier id, ExternalIdentifier externalId, CompanyName name)
+    {
+        Id = id!;
+        ExternalId = externalId!;
+        Name = name!;
+    }
 }

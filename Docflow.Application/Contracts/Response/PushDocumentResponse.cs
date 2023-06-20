@@ -2,5 +2,5 @@
 
 public class PushDocumentResponse
 {
-    public string ExternalId { get; init; }
+    public string? ExternalId { get; init; }
 }

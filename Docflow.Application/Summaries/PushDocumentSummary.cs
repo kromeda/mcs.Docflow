@@ -13,8 +13,8 @@ public class PushDocumentSummary : Summary<PushDocumentEndpoint, PushDocumentReq
     private void Request()
     {
         RequestParam(r => r.Id, "Идентификатор файла");
-        RequestParam(r => r.Name, "Наименование файла");
-        RequestParam(r => r.Data, "Байт массив файла");
+        RequestParam(r => r.Name!, "Наименование файла");
+        RequestParam(r => r.Data!, "Байт массив файла");
         RequestParam(r => r.ProviderType, "Провайдер, осуществляющий доставку файла");
 
         ExampleRequest = new PushDocumentRequest
@@ -28,7 +28,7 @@ public class PushDocumentSummary : Summary<PushDocumentEndpoint, PushDocumentReq
 
     private void Response()
     {
-        ResponseParam<PushDocumentResponse>(r => r.ExternalId, "Идентификатор документа в системе ЭДО");
+        ResponseParam<PushDocumentResponse>(r => r.ExternalId!, "Идентификатор документа в системе ЭДО");
         Response(200,
             "Документ успешно зарегистрирован у провайдера ЭДО. Содержит уникальный идентификатор для запроса информации по переданному документу.",
             example: new PushDocumentResponse

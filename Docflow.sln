@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EBA8A2CB-576
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docflow.Domain", "Docflow.Domain\Docflow.Domain.csproj", "{EA5BA26D-C7D0-4843-A483-AE04CA827AE4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{2E8A576C-1AFC-47F3-95EE-B779115B52D4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2E8A576C-1AFC-47F3-95EE-B779115B52D4}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
@@ -21,6 +21,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docflow.Application", "Docflow.Application\Docflow.Application.csproj", "{D6BD57DC-211F-4DE9-99BD-3522624EEF9D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docflow.Domain.Tests", "Docflow.Domain.Tests\Docflow.Domain.Tests.csproj", "{D0E1F2AD-807A-4495-9F84-A882F27C0D2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docflow.EdoTestProxy", "Docflow.EdoTestProxy\Docflow.EdoTestProxy.csproj", "{8D3E781E-50B8-4211-8272-6EAF25CC4A6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +42,10 @@ Global
 		{D0E1F2AD-807A-4495-9F84-A882F27C0D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0E1F2AD-807A-4495-9F84-A882F27C0D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0E1F2AD-807A-4495-9F84-A882F27C0D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D3E781E-50B8-4211-8272-6EAF25CC4A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D3E781E-50B8-4211-8272-6EAF25CC4A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D3E781E-50B8-4211-8272-6EAF25CC4A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D3E781E-50B8-4211-8272-6EAF25CC4A6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{EA5BA26D-C7D0-4843-A483-AE04CA827AE4} = {EBA8A2CB-5761-4157-AAF2-F1C6A82E0185}
 		{D6BD57DC-211F-4DE9-99BD-3522624EEF9D} = {EBA8A2CB-5761-4157-AAF2-F1C6A82E0185}
 		{D0E1F2AD-807A-4495-9F84-A882F27C0D2E} = {66DEC431-B37F-4335-B338-E21A723018D4}
+		{8D3E781E-50B8-4211-8272-6EAF25CC4A6D} = {EBA8A2CB-5761-4157-AAF2-F1C6A82E0185}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44E69314-33ED-4E49-AC19-5FE6CE17B44E}

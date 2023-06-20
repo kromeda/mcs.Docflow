@@ -1,4 +1,4 @@
-﻿namespace Docflow.Domain.Models;
+﻿namespace Docflow.Domain.Models.Enums;
 
 /// <summary>
 /// Типы ЭДО провайдеров

@@ -1,4 +1,4 @@
-﻿using Docflow.Domain.Models;
+﻿using Docflow.Domain.Models.Enums;
 
 namespace Docflow.Application.Extensions;
 

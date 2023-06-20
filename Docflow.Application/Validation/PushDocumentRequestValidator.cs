@@ -1,6 +1,4 @@
-﻿using FluentValidation;
-
-namespace Docflow.Application.Validation
+﻿namespace Docflow.Application.Validation
 {
     public class PushDocumentRequestValidator : AbstractValidator<PushDocumentRequest>
     {
@@ -17,7 +15,7 @@ namespace Docflow.Application.Validation
 
             RuleFor(x => x.Data)
                 .NotNull()
-                .Must(x => x.Length > 0)
+                .Must(x => x!.Length > 0)
                 .WithMessage("Отсутствует содержимое файла");
         }
     }

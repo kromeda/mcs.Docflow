@@ -2,7 +2,7 @@
 
 public class PushDocumentEndpoint : Endpoint<PushDocumentRequest, PushDocumentResponse>
 {
-    public IEnumerable<IEdoCommunicator> Communicators { get; init; }
+    public IEnumerable<IEdoCommunicator>? Communicators { get; init; }
 
     public override void Configure()
     {
@@ -13,7 +13,7 @@ public class PushDocumentEndpoint : Endpoint<PushDocumentRequest, PushDocumentRe
 
     public override async Task HandleAsync(PushDocumentRequest req, CancellationToken ct)
     {
-        IEdoCommunicator communicator = Communicators.FindOfEnum(req.ProviderType);
+        IEdoCommunicator communicator = Communicators!.FindOfEnum(req.ProviderType);
         FlowDocument document = req.ToFlowDocument();
         await communicator.PushDocument(document, ct);
         await SendOkAsync(document.ToPushDocument(), ct);

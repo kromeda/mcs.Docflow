@@ -6,8 +6,8 @@ namespace Docflow.Application.Services.Gateways;
 
 internal sealed class DiadocApiGateway : IDiadocApiGateway
 {
-    private DiadocApi _api;
-    private DiadocGatewayOptions _options;
+    private DiadocApi? _api;
+    private DiadocGatewayOptions? _options;
 
     public DiadocApiGateway(IOptionsMonitor<DiadocGatewayOptions> options)
     {
@@ -19,7 +19,7 @@ internal sealed class DiadocApiGateway : IDiadocApiGateway
     {
         ct.ThrowIfCancellationRequested();
 
-        string authToken = _api.Authenticate(_options.DefaultLogin, _options.DefaultPassword);
+        string authToken = _api!.Authenticate(_options!.DefaultLogin, _options.DefaultPassword);
         Message response = await _api.PostMessageAsync(authToken, message);
 
         return response;
